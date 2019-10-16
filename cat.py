@@ -14,11 +14,13 @@ class Catter(object):
 
     def run(self, fout):
         fmt = '{0:>6} {1}'
+        count = 1
         for fin in self.files:
             logging.debug('catting {0}'.format(fin))
-            for count, line in enumerate(fin, 1):
+            for line in fin:
                 if self.show_numbers:
                     fout.write(fmt.format(count, line))
+                    count += 1
                 else:
                     fout.write(line)
 
