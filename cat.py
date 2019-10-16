@@ -1,8 +1,10 @@
+#!/usr/bin/python3
+
 import argparse, logging, sys
 
 __version__ = '0.0.1'
 
-logging.basicConfig(level=logging.DEBUG)
+logging.basicConfig(level=logging.ERROR)
 
 class Catter(object):
 
@@ -34,7 +36,6 @@ def main(args):
     else:
         cat = Catter(args.files, args.number)
         cat.run(sys.stdout)
-        logging.debug('done catting')
 
 if __name__ == '__main__':
     main(sys.argv[1:])
