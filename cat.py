@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-r""" The implementation of the utility "cat" in python """
+""" The implementation of the utility "cat" in python """
 
 import argparse, logging, sys
 
